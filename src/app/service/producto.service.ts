@@ -13,7 +13,6 @@ export class ProductoService {
   constructor(private http: HttpClient) {}
 
   getAll(){
-    console.log(this.rutaGlobal + 'all');
     return this.http.get<Producto[]>(this.rutaGlobal + 'all')
   }
 
