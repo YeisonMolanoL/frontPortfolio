@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  rutaGlobal: 'http://localhost:8080'
+  rutaGlobal: 'https://portfolioback-production-26c6.up.railway.app'
 };
