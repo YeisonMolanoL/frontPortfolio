@@ -12,25 +12,30 @@
 </div>
 <div class="p-flex-col-column p-flex-sm-column p-flex-lg-row p-flex-md-row p-mt-3 p-d-lg-flex p-d-md-flex p-d-sm-flex p-d-col-flex p-jc-end prueba">
   <div class="p-lg-8 p-md-8 p-sm-12 p-col-12 p-order-lg-1 p-order-md-1 p-order-sm-2 p-order-col-2 down">
-    <table style="border: 2;">
-      <tr>
-        <th>Codigo</th>
-        <th>Nombre</th>
-        <th>Precio</th> 
-        <th>Stock</th>
-        <th>Editar</th>
-        <th>Eliminar</th>
-      </tr>
-      <tr *ngFor="let producto of productos">
-        <td>{{ producto.idPropucto }}</td>
-              <td>{{ producto.nombreProducto }}</td>
-              <td>{{ producto.precio | currency: 'USD' | lowercase }}</td>
-              <td>{{ producto.stock }}</td>
-              <td><p-button icon="pi pi-pencil" styleClass="p-button-rounded p-button-warning p-button-text p-button-raised" (onClick)="cargarUpdate(producto); crear = false"></p-button></td>
-              <td><p-button icon="pi pi-times" styleClass="p-button-rounded p-button-danger p-button-text p-button-raised" (onClick)="eliminar(producto.idPropucto!)"></p-button></td>
-      </tr>
-        
-    </table>
+    <div *ngIf="!loader" class="p-col-12">
+      <app-spinner></app-spinner>
+    </div>
+    <div *ngIf="loader">
+      <table style="border: 2;">
+        <tr>
+          <th>Codigo</th>
+          <th>Nombre</th>
+          <th>Precio</th> 
+          <th>Stock</th>
+          <th>Editar</th>
+          <th>Eliminar</th>
+        </tr>
+        <tr *ngFor="let producto of productos">
+          <td>{{ producto.idPropucto }}</td>
+                <td>{{ producto.nombreProducto }}</td>
+                <td>{{ producto.precio | currency: 'USD' | lowercase }}</td>
+                <td>{{ producto.stock }}</td>
+                <td><p-button icon="pi pi-pencil" styleClass="p-button-rounded p-button-warning p-button-text p-button-raised" (onClick)="cargarUpdate(producto); crear = false"></p-button></td>
+                <td><p-button icon="pi pi-times" styleClass="p-button-rounded p-button-danger p-button-text p-button-raised" (onClick)="eliminar(producto.idPropucto!)"></p-button></td>
+        </tr>
+          
+      </table>
+    </div>
   </div>
   <div class="p-lg-3 p-md-3 p-sm-12 p-col-12 p-order-lg-2 p-order-md-2 p-order-sm-1 p-order-col-1 up p-d-flex p-jc-end">
     <p-button
@@ -47,7 +52,10 @@
   [style]="{'max-width': '90vw'}"
 >
   <form action="" [formGroup]="formProducto">
-    <div>
+    <div *ngIf="!loader" class="p-d-flex p-jc-center">
+      <app-spinner></app-spinner>
+    </div>
+    <div *ngIf="loader">
       <div class="p-inputgroup p-mb-2">
         <span class="p-inputgroup-addon">
           <i class="pi pi-shopping-bag"></i>
@@ -58,9 +66,15 @@
         <span class="p-inputgroup-addon"><i class="pi pi-dollar"></i></span>
         <input type="text" pInputText placeholder="Precio" formControlName="precio"/>
       </div>
+      <div *ngIf="formProducto.get('precio')?.hasError('pattern')">
+        Solo se permiten números del 0 al 9.
+      </div>
       <div class="p-inputgroup p-mb-2">
         <span class="p-inputgroup-addon"><i class="pi pi-cart-plus"></i></span>
         <input type="text" pInputText placeholder="Stock" formControlName="stock"/>
+      </div>
+      <div *ngIf="formProducto.get('stock')?.hasError('pattern')">
+        Solo se permiten números del 0 al 9.
       </div>
     </div>
     <div class="p-d-flex p-jc-end" *ngIf="crear; else actualizar">

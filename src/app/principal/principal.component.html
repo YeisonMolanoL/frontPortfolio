@@ -42,9 +42,10 @@
           <h5 class="textos">
             <b>Hola!</b> Mi nombre es Yeison Molano. <br /><br />Me desempeño
             en el area del desarrollo web, mis capacidades son el diseño,
-            desarrollo e implementacion de aplicaciones FullStack, en el siguiente
-            boton encontraras un link en donde vas a poder interactuar con un crud
-            realizado con SpringBoot y Mysql. Para poder ver mas sobre mi puedes descargar mi <a class="link-cv" href="./../../assets/imagenes/CV-Yeison_Molano.pdf"
+            desarrollo e implementacion de aplicaciones FullStack, deslizando hacia abajo puedes ver mas 
+            sobre mi curriculum, como en el siguiente boton "CRUD Basico" encontraras un link en donde vas a poder 
+            interactuar con un crud realizado con SpringBoot y Mysql. Para poder ver mas sobre mi puedes 
+            descargar mi <a class="link-cv" href="./../../assets/imagenes/CV-Yeison_Molano.pdf"
             download="CV-Yeison_Molano.pdf">CV acá</a>. Si quieres conocer un poco mas de mi trabajo puedes ingresar
             a cualquiera de mis canales de información que encuentras en la parte superior derecha de la pantalla.
           </h5>
@@ -86,7 +87,53 @@
       data-aos="fade-right"
       data-aos-duration="2000"
     >
+      <div class="p-card p-col-12 p-md-6">
+        <div class="p-d-flex p-jc-center">
+          <h1 class="tittle">¡Experiencia!</h1>
+        </div>
+        <div class="p-d-flex p-jc-center">
+          <h2 class="textos">Desarrollador FullStack -> Bitech Software Consulting</h2>
+          <h2 class="textos">Fecha de inicio: Abril 2023</h2>
+          <h2 class="textos">Fecha de terminación: Enero 2024</h2>
+        </div>
+        <div class="p-d-flex p-jc-center">
+          <h1 class="textos">Herramientas utilizadas: <br>
+          Bitbucket. <br>
+          Slack, <br>
+          jira, <br>
+          Metodogolia Scrum, <br>
+          Pruebas unitarias con JUnit y Mockito.<br>
+          </h1>
+        </div>
+        
+      </div>
       <div
+        *ngFor="let skill of back"
+        class="p-lg-3 p-sm-6 p-mb-6 skil"
+        data-aos="flip-left"
+        data-aos-duration="800"
+      >
+        <h1 class="textos">{{ skill.nombreSkil }}</h1>
+        <div class="p-d-flex centrar">
+          <div class="p-lg-6">
+            <img src="{{ skill.logo }}" alt="" class="imgLogo" />
+          </div>
+          <div class="p-lg-6">
+            <p class="textos">
+              <b>Años de experciencia:</b> {{ skill.experiencia }} <br />
+              <b>Tipo de habilidad:</b> {{ skill.tipo }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="p-grid p-d-flex p-jc-center p-m-1 p-p-1"
+      data-aos="fade-left"
+      data-aos-duration="2000"
+    >
+    <div
         *ngFor="let skill of front"
         class="p-lg-3 p-sm-6 p-mb-sm-6 skil"
         data-aos="flip-left"
@@ -101,32 +148,6 @@
             <p class="textos">
               Años de experciencia: {{ skill.experiencia }} <br />
               Tipo de habilidad: {{ skill.tipo }}
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div
-      class="p-grid p-d-flex p-jc-center p-m-1 p-p-1"
-      data-aos="fade-left"
-      data-aos-duration="2000"
-    >
-      <div
-        *ngFor="let skill of back"
-        class="p-lg-4 p-sm-6 p-mb-6 skil"
-        data-aos="flip-left"
-        data-aos-duration="800"
-      >
-        <h1 class="textos">{{ skill.nombreSkil }}</h1>
-        <div class="p-d-flex centrar">
-          <div class="p-lg-6">
-            <img src="{{ skill.logo }}" alt="" class="imgLogo" />
-          </div>
-          <div class="p-lg-6">
-            <p class="textos">
-              <b>Años de experciencia:</b> {{ skill.experiencia }} <br />
-              <b>Tipo de habilidad:</b> {{ skill.tipo }}
             </p>
           </div>
         </div>

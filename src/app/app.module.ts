@@ -16,6 +16,7 @@ import { PrincipalComponent } from './principal/principal.component';
 import { MessageService } from 'primeng/api';
 import { CrudComponent } from './crud/crud.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     HeaderComponent,
     PrincipalComponent,
     CrudComponent,
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,
