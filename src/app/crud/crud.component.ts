@@ -11,12 +11,13 @@ import { MessageService } from 'primeng/api';
   styleUrls: ['./crud.component.css']
 })
 export class CrudComponent implements OnInit{
-  productos : Array<Producto>
-  formProducto: FormGroup
-  activeForm: boolean
-  crear: boolean
-  id: number
-  loader: boolean
+  productos : Array<Producto>;
+  formProducto: FormGroup;
+  activeForm: boolean;
+  crear: boolean;
+  id: number;
+  loader: boolean;
+  darkMode = false;
 
   constructor(private pService: ProductoService, private fb: FormBuilder, private message: MessageService){
     this.productos = new Array<Producto>();
@@ -111,6 +112,19 @@ export class CrudComponent implements OnInit{
     err =>{
       this.loader = !this.loader;
       this.message.add({ severity: 'warn', summary: '!Error inesperado¡', detail: 'Ha ocurrido un error interno, por favor comuniquese con el administrador del sistema' });
-    })
+    });
+  }
+
+  darkModeStyle(status: any){
+    if(this.darkMode){
+      const nuevaImagenFondo = 'url("./../../assets/imagenes/code2.jpg")';
+      document.documentElement.style.backgroundImage = nuevaImagenFondo;
+      document.body.style.backgroundImage = nuevaImagenFondo;
+    }else{
+      const nuevaImagenFondo = 'url("./../../assets/imagenes/code3.jpg")';
+      document.documentElement.style.backgroundImage = nuevaImagenFondo;
+      document.body.style.backgroundImage = nuevaImagenFondo;
+    }
+    this.darkMode = !this.darkMode;
   }
 }

@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastModule } from 'primeng/toast';
 import { TableModule } from 'primeng/table';
 import { DialogModule } from 'primeng/dialog';
+import { ToggleButtonModule } from 'primeng/togglebutton';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -37,7 +38,8 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     BrowserAnimationsModule,
     ToastModule,
     TableModule,
-    DialogModule
+    DialogModule,
+    ToggleButtonModule
   ],
   providers: [MessageService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

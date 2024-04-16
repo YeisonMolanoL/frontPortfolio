@@ -1,3 +1,10 @@
+.fondo {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    max-width: 90%;
+    margin: auto;
+}
+
 :host ::ng-deep .p-button.contact{
     background-color: #ffffff00;
     border-color: #eaff00;
@@ -53,7 +60,7 @@ th, td {
     border: 1px solid rgb(111, 111, 112);
     width: 100%;
     word-wrap: break-word;
-    color: aliceblue;
+    color: rgb(251, 251, 251);
     font-size: 15px;
     text-align: center;
     margin: 0px;
@@ -70,7 +77,31 @@ th{
 }
 
 .explicacion{
-    color: aliceblue;
+    color: rgb(0, 0, 0);
+}
+
+.ligth_mode {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+  }
+  
+  .black_mode {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+  }
+
+.fondo_dark_mode {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    max-width: 90%;
+    margin: auto;
+}
+
+.fondo_ligth_mode {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    max-width: 90%;
+    margin: auto;
 }
 
 @media screen and (max-width: 993px) {

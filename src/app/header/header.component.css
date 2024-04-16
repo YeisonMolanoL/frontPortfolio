@@ -23,6 +23,10 @@
     background-color: #ffffff00;
 }
 
+:host ::ng-deep .p-togglebutton.p-button.p-highlight{
+    background: black;
+}
+
 @media screen and (max-width: 470px) {
     .logoR{
         width: 20px;

@@ -1,7 +1,7 @@
-<app-header></app-header>
+<app-header (darkModeOut)="darkModeStyle($event)"></app-header>
 <div class="p-d-flex p-jc-center">
-  <div class="explicacion p-lg-8 p-md-8 p-sm-10 p-col-11">
-    <p>
+  <div class="explicacion p-lg-8 p-md-8 p-sm-10 p-col-11" [ngClass]="darkMode ? 'fondo_ligth_mode' : 'fondo_dark_mode'">
+    <p [ngClass]="darkMode ? 'ligth_mode' : 'black_mode'">
       En este apartado encuentras un CRUD basico de ejemplo en donde se pueden realizar los 
       respectivos procesos de creación, consulta, edición y eliminación de un producto X.
       Para iniciar con la creacion puedes pulsar en el boton de "Nuevo Producto", rellenas
@@ -15,7 +15,7 @@
     <div *ngIf="!loader" class="p-col-12">
       <app-spinner></app-spinner>
     </div>
-    <div *ngIf="loader">
+    <div *ngIf="loader" [ngClass]="darkMode ? 'fondo_ligth_mode' : 'fondo_dark_mode'">
       <table style="border: 2;">
         <tr>
           <th>Codigo</th>
@@ -26,12 +26,12 @@
           <th>Eliminar</th>
         </tr>
         <tr *ngFor="let producto of productos">
-          <td>{{ producto.idPropucto }}</td>
-                <td>{{ producto.nombreProducto }}</td>
-                <td>{{ producto.precio | currency: 'USD' | lowercase }}</td>
-                <td>{{ producto.stock }}</td>
-                <td><p-button icon="pi pi-pencil" styleClass="p-button-rounded p-button-warning p-button-text p-button-raised" (onClick)="cargarUpdate(producto); crear = false"></p-button></td>
-                <td><p-button icon="pi pi-times" styleClass="p-button-rounded p-button-danger p-button-text p-button-raised" (onClick)="eliminar(producto.idPropucto!)"></p-button></td>
+          <td [ngClass]="{'ligth_mode': darkMode, 'black_mode': !darkMode}">{{ producto.idPropucto }}</td>
+          <td [ngClass]="{'ligth_mode': darkMode, 'black_mode': !darkMode}">{{ producto.nombreProducto }}</td>
+          <td [ngClass]="{'ligth_mode': darkMode, 'black_mode': !darkMode}">{{ producto.precio | currency: 'USD' | lowercase }}</td>
+          <td [ngClass]="{'ligth_mode': darkMode, 'black_mode': !darkMode}">{{ producto.stock }}</td>
+          <td><p-button icon="pi pi-pencil" styleClass="p-button-rounded p-button-warning p-button-text p-button-raised" (onClick)="cargarUpdate(producto); crear = false"></p-button></td>
+          <td><p-button icon="pi pi-times" styleClass="p-button-rounded p-button-danger p-button-text p-button-raised" (onClick)="eliminar(producto.idPropucto!)"></p-button></td>
         </tr>
           
       </table>

@@ -1,5 +1,28 @@
-.tittle{
-    color: yellow;
+
+
+.fondo_dark_mode {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    max-width: 90%;
+    margin: auto;
+}
+
+.fondo_ligth_mode {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    max-width: 90%;
+    margin: auto;
+}
+
+.tittle_ligth_mode{
+    color: black;
+    font-family: inherit;
+    font-size: xxx-large;
+    text-shadow: rgb(255, 255, 255) 0.05em 0.05em 0.1em
+}
+
+.tittle_dark_mode{
+    color: white;
     font-family: inherit;
     font-size: xxx-large;
     text-shadow: rgb(255, 255, 255) 0.05em 0.05em 0.1em
@@ -27,7 +50,12 @@
     font-size: 55px;
 }
 
-.textos{
+.textos_ligth_mode{
+    font-size: medium;
+    color: white;
+}
+
+.textos_dark_mode{
     font-size: medium;
     color: white;
 }
@@ -51,8 +79,7 @@ a{
 
 .imgPrincipal{
     border-radius: 300px; 
-    width: 50%; 
-    opacity: 0.8
+    width: 50%;
 }
 
 .imgLogo{
@@ -64,8 +91,12 @@ a{
     width: 100%;
 }
 
-.link-cv{
+.link_cv_ligth_mode{
     color: #eaff00;
+}
+
+.link_cv_dark_mode{
+    color: black;
 }
 
 @media screen and (max-width: 885px){
@@ -94,8 +125,17 @@ a{
 }
 
 @media screen and (max-width: 476px) {
-    .tittle{
-        color: yellow;
+    .tittle_ligth_mode{
+        color: black;
+        font-family: inherit;
+        font-size: 14px;
+        text-shadow: rgb(255, 255, 255) 0.05em 0.05em 0.1em;
+        width: 90%;
+        text-align: center;
+    }
+
+    .tittle_dark_mode{
+        color: white;
         font-family: inherit;
         font-size: 14px;
         text-shadow: rgb(255, 255, 255) 0.05em 0.05em 0.1em;
