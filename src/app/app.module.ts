@@ -1,23 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ButtonModule } from 'primeng/button';
-import { InputTextareaModule } from 'primeng/inputtextarea';
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToastModule } from 'primeng/toast';
-import { TableModule } from 'primeng/table';
-import { DialogModule } from 'primeng/dialog';
-import { ToggleButtonModule } from 'primeng/togglebutton';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { PrincipalComponent } from './principal/principal.component';
+import { HeaderComponent } from './components/header/header.component';
+import { PrincipalComponent } from './pages/principal/principal.component';
 import { MessageService } from 'primeng/api';
-import { CrudComponent } from './crud/crud.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { CrudComponent } from './pages/crud/crud.component';
+import { InformativeCustomerComponent } from './pages/informative-customer/informative-customer.component';
+import { CardInfoComponent } from './components/card-info/card-info.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -26,20 +23,17 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     PrincipalComponent,
     CrudComponent,
     SpinnerComponent,
+    InformativeCustomerComponent,
+    CardInfoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ButtonModule,
-    InputTextareaModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    ToastModule,
-    TableModule,
-    DialogModule,
-    ToggleButtonModule
+    SharedModule
   ],
   providers: [MessageService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

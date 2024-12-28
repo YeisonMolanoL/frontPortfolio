@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import * as Aos from 'aos';
-import { Producto } from '../modells/Producto';
-import { ProductoService } from '../service/producto.service';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MessageService } from 'primeng/api';
+import { Producto } from 'src/app/components/modells/Producto';
+import { ProductoService } from 'src/app/service/producto.service';
 
 @Component({
   selector: 'app-crud',

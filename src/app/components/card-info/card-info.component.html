@@ -1,0 +1,18 @@
+<p-card [header]="title" [subheader]="subtitle">
+  <ng-template pTemplate="header">
+    <div style="padding: 1px;">
+      <img alt="img" [src]="imageSrc" class="rounded-top"/>
+    </div>
+  </ng-template>
+  <p>
+    {{ description }}
+  </p>
+  <ng-template pTemplate="footer">
+    <div class="d-flex justify-content-center gap-3">
+      <p-button
+        [label]="succesButtonText"
+        styleClass="p-button-danger"
+      ></p-button>
+    </div>
+  </ng-template>
+</p-card>

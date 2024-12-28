@@ -1,25 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import { Skill } from '../modells/skill';
-import * as AOS from 'aos';
-import { MailService } from '../service/mail.service';
+import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Mail } from '../modells/mail';
 import { MessageService } from 'primeng/api';
-import { BlockUI, NgBlockUI } from 'ng-block-ui';
+import { Mail } from 'src/app/components/modells/mail';
+import { Skill } from 'src/app/components/modells/skill';
+import { MailService } from 'src/app/service/mail.service';
+import * as AOS from 'aos';
 
 @Component({
-  selector: 'app-principal',
-  templateUrl: './principal.component.html',
-  styleUrls: ['./principal.component.css']
+  selector: 'app-informative-customer',
+  templateUrl: './informative-customer.component.html',
+  styleUrls: ['./informative-customer.component.css']
 })
-export class PrincipalComponent implements OnInit {
+export class InformativeCustomerComponent {
   front : Array<Skill>;
   back : Array<Skill>;
   name : string;
   formContactMe: FormGroup;
   darkMode = false;
 
-  constructor(private mService: MailService, private fb : FormBuilder, private message: MessageService) {
+  constructor(private mailService: MailService, private fb : FormBuilder, private message: MessageService) {
     this.front = new Array<Skill>();
     this.back = new Array<Skill>();
     this.name = '';
@@ -54,7 +53,7 @@ export class PrincipalComponent implements OnInit {
       mail.to = ''
       mail.subject = this.formContactMe.get('tema')?.value 
       mail.body = this.formContactMe.get('mensaje')?.value + '\nSoy ' + this.formContactMe.get('nombre')?.value + ' ' + this.formContactMe.get('apellido')?.value + '\nMi contacto es: ' + this.formContactMe.get('contacto')?.value
-      this.mService.sendMail(mail).subscribe({ next: (res: any) =>{
+      this.mailService.sendMail(mail).subscribe({ next: (res: any) =>{
         this.message.add({ severity: 'success', summary: '¡Correcto!', detail: 'Se ha enviado el mensaje' });
         this.formContactMe.reset()
       },

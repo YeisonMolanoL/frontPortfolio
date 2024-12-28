@@ -1,0 +1,26 @@
+:host ::ng-deep .p-card .p-card-body {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  padding-top: 5px;
+}
+
+:host ::ng-deep .p-card .p-card-content {
+  padding: 0.5rem 0;
+}
+
+:host ::ng-deep .p-card .p-card-title {
+  margin-bottom: 0px;
+}
+
+:host ::ng-deep .p-card .p-card-subtitle {
+  margin-bottom: 0px;
+}
+
+:host ::ng-deep .p-card .p-card-footer {
+  padding: 0px;
+}
+
+:host ::ng-deep .p-button {
+  padding: 0.25rem 1rem;
+}
