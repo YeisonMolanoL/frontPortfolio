@@ -2,8 +2,8 @@
     <div id="header">
 
     </div>
-    <div id="body" class="row">
-        <div *ngFor="let card of cards" class="col-md-3 p-1">
+    <div id="body" class="row container">
+        <div *ngFor="let card of cards" class="col-md-3 p-1 card-test">
             <app-card-info [title]="card.title" [subtitle]="card.subtitle" [imageSrc]="card.imageSrc" [description]="card.description" [succesButtonText]="card.succesButtonText"></app-card-info>
         </div>
     </div>

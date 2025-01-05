@@ -3,6 +3,7 @@
   padding-right: 1rem;
   padding-bottom: 1rem;
   padding-top: 5px;
+  max-height: 30vh;
 }
 
 :host ::ng-deep .p-card .p-card-content {

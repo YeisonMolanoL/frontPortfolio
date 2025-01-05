@@ -1,7 +1,12 @@
 <p-card [header]="title" [subheader]="subtitle">
   <ng-template pTemplate="header">
-    <div style="padding: 1px;">
-      <img alt="img" [src]="imageSrc" class="rounded-top"/>
+    <div class="flex-row" style="padding: 1px">
+      <img
+        alt="img"
+        [src]="imageSrc"
+        class="rounded-top"
+        style="max-width: 280px; max-height: 150px"
+      />
     </div>
   </ng-template>
   <p>
