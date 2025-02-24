@@ -15,6 +15,13 @@ import { CrudComponent } from './pages/crud/crud.component';
 import { InformativeCustomerComponent } from './pages/informative-customer/informative-customer.component';
 import { CardInfoComponent } from './components/card-info/card-info.component';
 import { SharedModule } from './shared/shared.module';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { InformationCompleteComponent } from './components/information-complete/information-complete.component';
+import { SeeInformationComponent } from './components/see-information/see-information.component';
+import { DialogService, DynamicDialogModule } from 'primeng/dynamicdialog';
 
 @NgModule({
   declarations: [
@@ -25,6 +32,12 @@ import { SharedModule } from './shared/shared.module';
     SpinnerComponent,
     InformativeCustomerComponent,
     CardInfoComponent,
+    ProjectsComponent,
+    HomeComponent,
+    AboutComponent,
+    ContactComponent,
+    InformationCompleteComponent,
+    SeeInformationComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,9 +46,10 @@ import { SharedModule } from './shared/shared.module';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    DynamicDialogModule
   ],
-  providers: [MessageService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [DialogService, MessageService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

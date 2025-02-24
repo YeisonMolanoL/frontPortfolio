@@ -1,0 +1,18 @@
+:host ::ng-deep .p-inputtext {
+  padding: 0.4rem 0.4rem;
+}
+
+@media screen and (max-width: 768px) { 
+    .hero-title{
+        font-size: 2.5rem !important;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem !important;
+    }
+}

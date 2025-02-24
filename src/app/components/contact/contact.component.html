@@ -1,0 +1,119 @@
+<div class="page p-4 p-md-0 hv-85 d-flex justify-content-center align-items-center" id="contact-page">
+  <section class="section" id="contact">
+    <div class="p-d-lg-flex p-jc-center p-ai-center">
+      <div class="card p-2">
+        <h2 class="section-title  hero-subtitle">¡Contactame!</h2>
+        <div class="px-md-3" style="max-width: 600px;">
+          <form action="" [formGroup]="formContactMe">
+            <div class="p-d-lg-flex p-d-md-flex p-d-sm-block">
+              <div class="p-lg-6 p-md-6 p-sm-12 p-col-12">
+                <input
+                  class="ng-dirty"
+                  placeholder="Nombre *"
+                  type="text"
+                  pInputText
+                  formControlName="nombre"
+                  required
+                  class="w-100"
+                  [ngClass]="{
+                    'ng-dirty': formContactMe.get('nombre')?.errors?.['required'] && formContactMe.get('nombre')?.touched,
+                  }"
+                />
+                <div
+                  class="text-center"
+                  *ngIf="
+                    formContactMe.get('nombre')?.invalid &&
+                    formContactMe.get('nombre')?.touched
+                  "
+                >
+                  <small
+                    class="text-danger"
+                    *ngIf="formContactMe.get('nombre')?.errors?.['required']"
+                    >Este campo es obligatorio.</small
+                  >
+                </div>
+              </div>
+              <div class="p-lg-6 p-md-6 p-sm-12">
+                <input
+                  type="text"
+                  placeholder="Apellido"
+                  pInputText
+                  formControlName="apellido"
+                  class="w-100"
+                />
+              </div>
+            </div>
+            <div class="p-col-12">
+              <input
+                placeholder="Tema*"
+                type="text"
+                pInputText
+                formControlName="tema"
+                class="w-100"
+                required
+              />
+              <div
+                  class="text-center"
+                  *ngIf="
+                    formContactMe.get('tema')?.invalid &&
+                    formContactMe.get('tema')?.touched
+                  "
+                >
+                  <small
+                    class="text-danger"
+                    *ngIf="formContactMe.get('tema')?.errors?.['required']"
+                    >Este campo es obligatorio.</small
+                  >
+                </div>
+            </div>
+            <div class="p-col-12">
+              <input
+                placeholder="Contacto"
+                class="w-100"
+                type="text"
+                pInputText
+                formControlName="contacto"
+              />
+            </div>
+            <div class="p-col-12">
+              <textarea
+                rows="4"
+                cols="30"
+                placeholder="Mensaje *"
+                pInputTextarea
+                [autoResize]="true"
+                formControlName="mensaje"
+                class="w-100"
+                [ngClass]="{
+                    'ng-dirty': formContactMe.get('mensaje')?.errors?.['required'] && formContactMe.get('mensaje')?.touched,
+                  }"
+              ></textarea>
+              <div
+                  class="text-center"
+                  *ngIf="
+                    formContactMe.get('mensaje')?.invalid &&
+                    formContactMe.get('mensaje')?.touched
+                  "
+                >
+                  <small
+                    class="text-danger"
+                    *ngIf="formContactMe.get('mensaje')?.errors?.['required']"
+                    >Este campo es obligatorio.</small
+                  >
+                </div>
+            </div>
+            <div class="p-d-flex p-jc-end p-pr-2">
+              <button
+                styleClass="contact"
+                class="btn btn-primary"
+                (onClick)="sendMail()"
+              >Contactame</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<p-toast></p-toast>

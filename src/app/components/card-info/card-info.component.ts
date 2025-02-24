@@ -12,4 +12,13 @@ export class CardInfoComponent {
   @Input() description: string = 'Aca va la descripción de que lo que usted quiere que diga su card';
   @Input() succesButtonText: string = 'Ver mas...';
   @Input() cancelButtonText: string = 'Cancelar';
+  @Input() url: string = '';
+  @Input() showButton: boolean = true;
+  @Input() allImageSize: boolean = true;
+
+  constructor(){}
+
+  navigateToExternalUrl() {
+    window.location.href = this.url;
+  }
 }

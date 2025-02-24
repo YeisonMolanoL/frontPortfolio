@@ -7,6 +7,7 @@ import { TableModule } from 'primeng/table';
 import { DialogModule } from 'primeng/dialog';
 import { ToggleButtonModule } from 'primeng/togglebutton';
 import { InputTextareaModule } from 'primeng/inputtextarea';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [],
@@ -18,7 +19,8 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
     TableModule,
     DialogModule,
     ToggleButtonModule,
-    InputTextareaModule
+    InputTextareaModule,
+    InputTextModule
   ],
   exports: [
     CardModule,
@@ -27,7 +29,8 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
     TableModule,
     DialogModule,
     ToggleButtonModule,
-    InputTextareaModule
+    InputTextareaModule,
+    InputTextModule
   ]
 })
 export class PrimengModule { }

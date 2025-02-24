@@ -1,15 +1,148 @@
-/* You can add global styles to this file, and also import other style files */
-html, body{
-    margin: 0;
-    padding: 0;
-    background-image: url('./assets/imagenes/code2.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
+@import "./assets/styles/colors/colors.css";
+@import "./assets/styles/theme.css";
 
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary) !important;
+  /* background-size: cover;
+    background-position: center; */
+  height: 100vh;
+  font-family: var(--bs-body-font-family);
+  line-height: 1.6;
+  color: var(--text);
+  /* background-repeat: no-repeat;
+    background-attachment: fixed; */
+}
+/* 
 p{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} */
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.nav-link {
+  font-size: inherit !important;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #a8b6ff;
+}
+
+.hero {
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  padding-bottom: 0.2rem;
+  background: linear-gradient(45deg, #0084ff, #00f2fe);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 3s steps(17, end) forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+    font-family: inherit;
+  }
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover:before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 132, 255, 0.4);
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #0084ff, #00f2fe);
+  color: white;
+}
+
+.text-danger {
+  color: red;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.hv-100 {
+  height: 100vh;
+}
+
+.hv-85 {
+  height: 85vh;
+}
+
+.ww-70 {
+  width: 70vw;
 }

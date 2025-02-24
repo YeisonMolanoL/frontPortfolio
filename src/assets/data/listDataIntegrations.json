@@ -1,0 +1,97 @@
+[
+  {
+    "name": "WhatsApp",
+    "services": [
+      {
+        "title": "Mensajes personalizados.",
+        "description": "Creamos soluciones para enviar mensajes personalizados a tus clientes, utilizando su nombre, preferencias o datos específicos. Mejora la experiencia del usuario y aumenta la engagement con tu marca.",
+        "icon": "📩"
+      },
+      {
+        "title": "Envíos masivos",
+        "description": "Automatiza el envío de mensajes masivos para promociones, recordatorios o notificaciones importantes. Llega a cientos o miles de contactos de manera rápida y eficiente, sin perder el toque personal.",
+        "icon": "📢"
+      },
+      {
+        "title": "Chatbots automatizados",
+        "description": "Implementa chatbots inteligentes que responden preguntas frecuentes, gestionan citas o procesan pedidos. Reduce tiempos de espera y optimiza la atención al cliente las 24/7.",
+        "icon": "🤖"
+      },
+      {
+        "title": "Integración con sistemas",
+        "description": "Conectamos WhatsApp con tu CRM, ERP o plataforma de gestión para sincronizar datos, gestionar contactos y automatizar flujos de trabajo. Todo en un solo lugar.",
+        "icon": "🔔"
+      },
+      {
+        "title": "Notificaciones y alertas",
+        "description": "Configuramos notificaciones automáticas para confirmaciones de pedidos, recordatorios de citas, actualizaciones de estado y más. Mantén a tus clientes informados en tiempo real.",
+        "icon": "🎯"
+      },
+      {
+        "title": "Soporte técnico y mantenimiento",
+        "description": "Ofrecemos soporte continuo para garantizar que tu integración con WhatsApp funcione sin problemas. Nos encargamos de las actualizaciones y mejoras necesarias.",
+        "icon": "🛠️"
+      }
+    ]
+  },
+  {
+    "name": "Google Maps",
+    "services": [
+      {
+        "title": "Integración de mapas interactivos",
+        "description": "Incorpora mapas interactivos en tu sitio web o aplicación para que tus clientes encuentren tu ubicación fácilmente. Personaliza marcadores, rutas y zonas de cobertura.",
+        "icon": "🗺️"
+      },
+      {
+        "title": "Geolocalización en tiempo real",
+        "description": "Implementa funciones de geolocalización en tiempo real para mostrar la ubicación de tus repartidores, vehículos o personal en movimiento. Ideal para servicios de delivery, logística o transporte.",
+        "icon": "📍"
+      },
+      {
+        "title": "Búsqueda de rutas optimizadas",
+        "description": "Ofrece a tus usuarios la posibilidad de calcular rutas óptimas hacia tu negocio, incluyendo opciones de transporte (coche, transporte público, a pie o bicicleta).",
+        "icon": "🚗"
+      },
+      {
+        "title": "Marcadores personalizados",
+        "description": "Destaca tus puntos de interés con marcadores personalizados que incluyen información adicional, como horarios, promociones o enlaces a tu sitio web.",
+        "icon": "📌"
+      },
+      {
+        "title": "Google My Business",
+        "description": "Optimizo y sincronizo tu perfil de Google My Business con Google Maps para mejorar tu visibilidad en las búsquedas locales. Atrae más clientes y aumenta tus reseñas.",
+        "icon": "📈"
+      }
+    ]
+  },
+  {
+    "name": "Google Calendar",
+    "services": [
+      {
+        "title": "Sincronización de agendas",
+        "description": "Sincronizo Google Calendar con tus sistemas internos, herramientas de gestión o aplicaciones móviles para centralizar todos tus eventos, reuniones y recordatorios en un solo lugar.",
+        "icon": "📅"
+      },
+      {
+        "title": "Automatización de citas",
+        "description": "Configuro sistemas de reservas automatizadas que permiten a tus clientes agendar citas directamente en tu Google Calendar, evitando conflictos de horarios y duplicaciones.",
+        "icon": "⏰"
+      },
+      {
+        "title": "Recordatorios inteligentes",
+        "description": "Implemento recordatorios automáticos para eventos importantes, reuniones o tareas pendientes. Pueden enviarse por correo electrónico, notificaciones push o incluso mensajes de WhatsApp.",
+        "icon": "🔔"
+      },
+      {
+        "title": "Integración con herramientas de equipo",
+        "description": "Conecto Google Calendar con plataformas como Slack, Trello o Microsoft Teams para mejorar la coordinación y productividad de tu equipo.",
+        "icon": "🛠️"
+      },
+      {
+        "title": "Calendarios compartidos",
+        "description": "Creo calendarios compartidos para equipos de trabajo, departamentos o proyectos específicos, facilitando la colaboración y la gestión del tiempo.",
+        "icon": "👥"
+      }
+    ]
+  }
+]

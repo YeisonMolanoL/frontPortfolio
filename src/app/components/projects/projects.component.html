@@ -1,0 +1,40 @@
+<div class="page p-4 p-md-0" id="projects-page">
+  <section class="section pt-3" id="projects">
+    <div>
+      <h2 class="section-title hero-subtitle">Mis Proyectos</h2>
+      <div>
+        <div class="row justify-content-center align-items-center">
+          <div *ngFor="let card of cards" class="col-md-3">
+            <app-card-info
+              [title]="card.title"
+              [subtitle]="card.subtitle"
+              [imageSrc]="card.imageSrc"
+              [description]="card.description"
+              [succesButtonText]="card.succesButtonText"
+              [url]="card.url"
+            ></app-card-info>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2 class="section-title hero-subtitle">Integraciones con:</h2>
+      <div>
+        <div class="row justify-content-center align-items-center">
+          <div *ngFor="let integration of integrations" class="col-md-3">
+            <app-card-info
+            [title]="integration.title"
+            [imageSrc]="integration.imageSrc"
+            [description]="integration.description"
+            [succesButtonText]="integration.succesButtonText"
+            [showButton]="false"
+            [allImageSize]="false"
+            [subtitle]="integration.subtitle"
+            (click)="openDialog(integration.title)"
+            ></app-card-info>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

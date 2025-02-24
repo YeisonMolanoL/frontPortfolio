@@ -24,6 +24,7 @@
               "src/_redirects"
             ],
             "styles": [
+              "src/assets/styles/colors/colors.css",
               "src/styles.css",
               "node_modules/primeicons/primeicons.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",

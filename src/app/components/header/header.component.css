@@ -1,3 +1,5 @@
+@import url('../../../assets/styles/colors/colors.css'); 
+
 .logoR{
     width: 3rem;
 }
@@ -36,3 +38,72 @@
         width: 20%;
     }
   }
+
+.containerTest {
+    background-color: var(--primary);
+}
+
+.tittle-name {
+    color: white; font-size: 1.8rem; font-weight: bold; cursor: pointer; transition: transform 0.3s;
+}
+
+.tittle-name:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+.nav {
+  padding: 1rem 2rem;
+  background: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.nav-logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.nav-logo:hover {
+  transform: scale(1.1);
+}
+
+.nav-links {
+  display: flex;
+  gap: auto;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.nav-link:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--accent);
+  transition: width 0.3s;
+}
+
+.nav-link:hover:after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}

@@ -1,0 +1,5 @@
+<div class="d-flex flex-column gap-3 ww-70">
+    <div *ngFor="let service of services">
+        <app-information-complete [title]="service.title" [description]="service.description" [icon]="service.icon"></app-information-complete>
+    </div>
+</div>

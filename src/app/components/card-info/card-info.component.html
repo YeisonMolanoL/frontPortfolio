@@ -1,23 +1,21 @@
+<div class="project-card mb-4">
 <p-card [header]="title" [subheader]="subtitle">
   <ng-template pTemplate="header">
-    <div class="flex-row" style="padding: 1px">
+    <div class="flex-row d-flex justify-content-center" style="padding: 1px">
       <img
         alt="img"
-        [src]="imageSrc"
-        class="rounded-top"
-        style="max-width: 280px; max-height: 150px"
+        [src]="'../../../assets/imagenes/' + imageSrc"
+        [ngStyle]="allImageSize ? {} : {width: '30vh'}"
       />
     </div>
   </ng-template>
-  <p>
+  <p class="p-0 m-0">
     {{ description }}
   </p>
   <ng-template pTemplate="footer">
-    <div class="d-flex justify-content-center gap-3">
-      <p-button
-        [label]="succesButtonText"
-        styleClass="p-button-danger"
-      ></p-button>
+    <div *ngIf="showButton" class="d-flex justify-content-center gap-3">
+      <button class="btn btn-primary" (click)="navigateToExternalUrl()">{{succesButtonText}}</button>
     </div>
   </ng-template>
 </p-card>
+</div>
