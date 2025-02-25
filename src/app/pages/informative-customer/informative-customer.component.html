@@ -36,7 +36,7 @@
       <br />
       <div class="p-grid">
         <div class="p-lg-6 p-md-6 p-sm-12 p-d-flex p-jc-center">
-          <img src="./assets/imagenes/mio.jpg" class="imgPrincipal" />
+          <img src="./assets/imagenes/mio.jpg" class="imgPrincipal" loading="lazy"/>
         </div>
         <div
           class="p-lg-6 p-md-6 p-sm-12 p-text-sm-center" [ngClass]="darkMode ? 'textos_ligth_mode' : 'textos_dark_mode'"
@@ -106,7 +106,7 @@
             <h1 [ngClass]="darkMode ? 'textos_ligth_mode' : 'textos_dark_mode'">{{ skill.nombreSkil }}</h1>
             <div class="p-d-flex centrar">
               <div class="p-lg-6">
-                <img src="{{ skill.logo }}" alt="" class="imgLogo" />
+                <img src="{{ skill.logo }}" alt="" class="imgLogo" loading="lazy"/>
               </div>
               <div class="p-lg-6">
                 <p [ngClass]="darkMode ? 'textos_ligth_mode' : 'textos_dark_mode'">
@@ -133,7 +133,7 @@
             <h1 [ngClass]="darkMode ? 'textos_ligth_mode' : 'textos_dark_mode'">{{ skill.nombreSkil }}</h1>
             <div class="p-d-flex centrar">
               <div class="p-lg-6">
-                <img src="{{ skill.logo }}" class="imgLogo" />
+                <img src="{{ skill.logo }}" class="imgLogo" loading="lazy"/>
               </div>
               <div class="p-lg-6">
                 <p [ngClass]="darkMode ? 'textos_ligth_mode' : 'textos_dark_mode'">

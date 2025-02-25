@@ -33,15 +33,6 @@ export class ProjectsComponent {
   ];
   integrations = [
     {
-      title: 'WhatsApp',
-      subtitle: 'Potencia tu comunicación con WhatsApp.',
-      imageSrc: 'whatsapp-integration.png',
-      description:
-        'Ofrezco integraciones avanzadas con WhatsApp para potenciar tu comunicación. Envío mensajes personalizados o masivos, automatizo respuestas y optimizo la interacción con tus clientes. Maximiza tu alcance y eficiencia con soluciones a medida. ¡Conecta mejor con tu audiencia y haz crecer tu negocio!',
-      succesButtonText: 'Ver más...',
-      url: 'https://github.com/YeisonMolanoL/streamTech',
-    },
-    {
       title: 'Google Maps',
       subtitle: 'Conquista el mundo con Maps.',
       imageSrc: 'google-maps-integration.png',
@@ -49,6 +40,15 @@ export class ProjectsComponent {
         'Ofrezco integraciones con Google Maps para optimizar tu presencia en línea. Configuro ubicaciones, muestro rutas personalizadas, integro mapas interactivos en tu sitio web y mejoro la visibilidad de tu negocio. Atrae más clientes y facilita que te encuentren. ¡Potencia tu geolocalización y destaca en el mapa!',
       succesButtonText: 'Ver más...',
       url: 'https://github.com/YeisonMolanoL/rutas',
+    },
+    {
+      title: 'WhatsApp',
+      subtitle: 'Potencia tu comunicación con WhatsApp.',
+      imageSrc: 'whatsapp-integration.png',
+      description:
+        'Ofrezco integraciones avanzadas con WhatsApp para potenciar tu comunicación. Envío mensajes personalizados o masivos, automatizo respuestas y optimizo la interacción con tus clientes. Maximiza tu alcance y eficiencia con soluciones a medida. ¡Conecta mejor con tu audiencia y haz crecer tu negocio!',
+      succesButtonText: 'Ver más...',
+      url: 'https://github.com/YeisonMolanoL/streamTech',
     },
     {
       title: 'Google Calendar',
@@ -68,6 +68,18 @@ export class ProjectsComponent {
         title,
         message: 'Hola, esto es un mensaje desde el componente padre'
       }
+    });
+
+    history.pushState({ dialogOpen: true }, '');
+
+    window.onpopstate = () => {
+      if (ref) {
+        ref.close();
+      }
+    };
+
+    ref.onClose.subscribe(() => {
+      window.onpopstate = null;
     });
   }
 }
